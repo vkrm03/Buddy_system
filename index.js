@@ -115,16 +115,6 @@ app.get("/dashboard",checkAuth, async (req, res) => {
     }
 });
 
-app.get("/student-data",checkAuth, async (req, res) => {
-    const staff = await db.query('SELECT * FROM staff_information WHERE id = $1', [currnt_Id]);
-    staff_name = staff.rows[0].name
-    const result = await db.query('SELECT * FROM mentor_student_information WHERE staff_id = $1', [currnt_Id]);
-    student1 = result.rows[0]
-    student2 = result.rows[1]
-    student3 = result.rows[2]
-    res.render("student-data.ejs",{StaffName:staff_name,student_1:student1,student_2:student2,student_3:student3,image_url: currnt_image_url});
-});
-
 app.get("/odop",checkAuth, async (req, res) => {
     const staff = await db.query('SELECT * FROM staff_information WHERE id = $1', [currnt_Id]);
     staff_name = staff.rows[0].name

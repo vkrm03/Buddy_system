@@ -30,7 +30,6 @@
             </div>
             <ul>
                 <li><a href="/dashboard"><i class="fas fa-home"></i>  Home</a></li>
-                <li><a href="/student-data"><i class="fas fa-user-graduate"></i>  Student Data</a></li>
                 <li><a href="/odop"><i class="fas fa-edit"></i>  ODOP</a></li>
                 <li><a href="/edit-student"><i class="fas fa-user-plus"></i>  Edit Student</a></li>
                 <li><a href="/student-stats"><i class="fas fa-file-alt"></i>  Student Statistics</a></li>
@@ -48,64 +47,112 @@
                     <div class="value"><%=full_data.reg_no%></div>
                 </div>
                 <div class="detail-row">
-                    <div class="label">Section:</div>
-                    <div class="value"><%=full_data.section%></div>
+                    <div class="label">Average Marks:</div>
+                    <div class="value">83</div>
                 </div>
 
 
             <table class="marks-table">
                 <thead>
                     <tr>
-                        <th>Subject Name</th>
-                        <th>Internal</th>
-                        <th>External</th>
-                        <th>Total</th>
-                        <th>Result</th>
+                        <th>ODOP Days</th>
+                        <th>Status</th>
+                        <th>Due date</th>
+                        <th>Marks</th>
+                        <th>Grade</th>
                     </tr>
                 </thead>
                 <tbody>
                     
                     <tr>
-                        <td>Chemistry</td>
-                        <td><%=full_data.chemistry_internal%></td>
-                        <td><%=full_data.chemistry_external%></td>
-                        <td><%=full_data.chemistry_total%></td>
-                        <td><%=full_data.chemistry_result%></td>
+                        <td>Day 1</td>
+                        <td>Submited</td>
+                        <td>17/04/2024</td>
+                        <td>83</td>
+                        <td><select name="" id="">
+                            <option value="">A++</option>
+                            <option value="">A+</option>
+                            <option value="">B+</option>
+                            <option value="">B</option>
+                            <option value="">D</option>
+                            <option value="">D</option>
+                        </select>
+                        </td>
                     </tr>
                     <tr>
-                        <td>Chemistry Lab</td>
-                        <td><%=full_data.chemistry_lab_internal%></td>
-                        <td><%=full_data.chemistry_lab_external%></td>
-                        <td><%=full_data.chemistry_lab_total%></td>
-                        <td><%=full_data.chemistry_lab_result%></td>
+                        <td>Day 2</td>
+                        <td>Submited</td>
+                        <td>17/04/2024</td>
+                        <td>83</td>
+                        <td><select name="" id="">
+                            <option value="">A++</option>
+                            <option value="">A+</option>
+                            <option value="">B+</option>
+                            <option value="">B</option>
+                            <option value="">D</option>
+                            <option value="">D</option>
+                        </select>
+                        </td>
                     </tr>
                     <tr>
-                        <td>EEE</td>
-                        <td><%=full_data.eee_internal%></td>
-                        <td><%=full_data.eee_external%></td>
-                        <td><%=full_data.eee_total%></td>
-                        <td><%=full_data.eee_result%></td>
+                        <td>Day 3</td>
+                        <td>Submited</td>
+                        <td>17/04/2024</td>
+                        <td>83</td>
+                        <td><select name="" id="">
+                            <option value="">A++</option>
+                            <option value="">A+</option>
+                            <option value="">B+</option>
+                            <option value="">B</option>
+                            <option value="">D</option>
+                            <option value="">D</option>
+                        </select>
+                        </td>
                     </tr>
                     <tr>
-                        <td>Matrics And Calculus</td>
-                        <td><%=full_data.m1_internal%></td>
-                        <td><%=full_data.m1_external%></td>
-                        <td><%=full_data.m1_total%></td>
-                        <td><%=full_data.m1_result%></td>
+                        <td>Day 4</td>
+                        <td>Submited</td>
+                        <td>17/04/2024</td>
+                        <td>83</td>
+                        <td><select name="" id="">
+                            <option value="">A++</option>
+                            <option value="">A+</option>
+                            <option value="">B+</option>
+                            <option value="">B</option>
+                            <option value="">D</option>
+                            <option value="">D</option>
+                        </select>
+                        </td>
                     </tr>
                     <tr>
-                        <td>Programming in c</td>
-                        <td><%=full_data.prog_c_internal%></td>
-                        <td><%=full_data.prog_c_external%></td>
-                        <td><%=full_data.prog_c_total%></td>
-                        <td><%=full_data.prog_c_result%></td>
+                        <td>Day 5</td>
+                        <td>Submited</td>
+                        <td>17/04/2024</td>
+                        <td>83</td>
+                        <td><select name="" id="">
+                            <option value="">A++</option>
+                            <option value="">A+</option>
+                            <option value="">B+</option>
+                            <option value="">B</option>
+                            <option value="">D</option>
+                            <option value="">D</option>
+                        </select>
+                        </td>
                     </tr>
                     <tr>
-                        <td>Technical English</td>
-                        <td><%=full_data.eng_internal%></td>
-                        <td><%=full_data.eng_external%></td>
-                        <td><%=full_data.eng_total%></td>
-                        <td><%=full_data.eng_result%></td>
+                        <td>Day 6</td>
+                        <td>Submited</td>
+                        <td>17/04/2024</td>
+                        <td>83</td>
+                        <td><select name="" id="">
+                            <option value="">A++</option>
+                            <option value="">A+</option>
+                            <option value="">B+</option>
+                            <option value="">B</option>
+                            <option value="">D</option>
+                            <option value="">D</option>
+                        </select>
+                        </td>
                     </tr>
                     
                 </tbody>
