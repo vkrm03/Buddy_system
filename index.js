@@ -125,10 +125,10 @@ app.get("/student-data",checkAuth, async (req, res) => {
     res.render("student-data.ejs",{StaffName:staff_name,student_1:student1,student_2:student2,student_3:student3,image_url: currnt_image_url});
 });
 
-app.get("/edit-staff-data",checkAuth, async (req, res) => {
+app.get("/odop",checkAuth, async (req, res) => {
     const staff = await db.query('SELECT * FROM staff_information WHERE id = $1', [currnt_Id]);
     staff_name = staff.rows[0].name
-    res.render("edit.ejs", {StaffName:staff_name, image_url: currnt_image_url});
+    res.render("odop.ejs", {StaffName:staff_name, image_url: currnt_image_url});
 });
 
 app.get("/edit-student",checkAuth, async (req, res) => {
