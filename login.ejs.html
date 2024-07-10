@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Cards</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="name-card-container">
+      <% for(var i=1; i<21; i++) {%>
+        <div class="name-card">
+            <div class="profile-img">
+                <img src="../student-mentee-project-v3/public/senior.jpg" alt="Profile Image">
+            </div>
+            <div class="details">
+                <h2>John Doe</h2>
+                <p>Reg No: 123456</p>
+                <p>Email: john.doe@example.com</p>
+                <p>Mobile: +1234567890</p>
+            </div>
+        </div>
+        <% } %>
+    </div>
+</body>
+</html>
+
+
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.name-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.name-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.profile-img img {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.details h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.details p {
+    margin: 5px 0;
+    color: #666;
+}
+
+</style>

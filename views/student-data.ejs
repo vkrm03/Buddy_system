@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students Data</title>
+    <link rel="stylesheet" href="student-data.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="https://erp.sathyabama.ac.in/assets/images/logo-new.png" alt="Logo">
+        </div>
+        <div class="user-profile">
+            <img src="https://erp.sathyabama.ac.in/assets/images/Chancellor.jpg" alt="User Avatar">
+            <div class="username">Staff</div>
+            <a href="/logout" class="logout-btn"><i class="fas fa-sign-out-alt"></i>  Logout</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="sidebar">
+            <h1 class="dash">Dashboard</h1>
+            <div class="admin-profile">
+                <div class="admin-icon"><img src=<%=image_url%> alt="Staff Image"></div>
+                <p><%=StaffName%></p>
+            </div>
+            <ul>
+                <li><a href="/dashboard" class="active"><i class="fas fa-home"></i>  Home</a></li>
+                <li><a href="/student-data" class="active"><i class="fas fa-user-graduate"></i>  Student Data</a></li>
+                <li><a href="/edit-staff-data" class="active"><i class="fas fa-edit"></i>  Edit Staff Data</a></li>
+                <li><a href="/edit-student" class="active"><i class="fas fa-user-plus"></i>  Edit Student</a></li>
+                <li><a href="/student-stats" class="active"><i class="fas fa-file-alt"></i>  Student Statistics</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <h1>Mentor Student Information</h1>
+            <div class="details">
+                <div class="card">
+                    <img src="senior.jpg" alt="John Doe">
+                    <h2><%=student_1.name%></h2>
+                    <p>Reg No: <%=student_1.reg_no%></p>
+                    <p><%=student_1.email%></p>
+                    <p><%=student_1.mobile_no%></p>
+                    <p><a href="/student-data/info?std_id=<%=student_1.id%>" style="text-decoration: none;"><i class="fas fa-external-link-alt"></i> Open</a></p>
+                </div>
+
+                <div class="card">
+                    <img src="senior.jpg" alt="Jane Smith">
+                    <h2><%=student_2.name%></h2>
+                    <p>Reg No: <%=student_2.reg_no%></p>
+                    <p><%=student_2.email%></p>
+                    <p><%=student_2.mobile_no%></p>
+                    <p><a href="/student-data/info?std_id=<%=student_2.id%>" style="text-decoration: none;"><i class="fas fa-external-link-alt"></i> Open</a></p>
+                </div>
+
+                <div class="card">
+                    <img src="senior.jpg" alt="Emily Johnson">
+                    <h2><%=student_3.name%></h2>
+                    <p>Reg No: <%=student_3.reg_no%></p>
+                    <p><%=student_3.email%></p>
+                    <p><%=student_3.mobile_no%></p>
+                    <p><a href="/student-data/info?std_id=<%=student_3.id%>" style="text-decoration: none;"><i class="fas fa-external-link-alt"></i> Open</a></p>
+                </div>
+            </div>  
+        </div>
+    </div>
+</body>
+</html>
