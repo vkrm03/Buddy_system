@@ -16,7 +16,7 @@ db.connect();
 const app = express();
 const port = 3000;
 
-let currnt_Id, currnt_image_url;
+let currnt_Id, currnt_image_url ,currnt_role;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
@@ -54,6 +54,7 @@ app.get("/login", async (req, res) => {
 app.get("/logout", (req, res) => {
     currnt_Id = null;
     currnt_image_url = null;
+    currnt_role = null;
     res.redirect("/login?logout=true");
 });
 
@@ -62,6 +63,8 @@ app.post("/login", async (req, res) => {
     const role = req.body.role
     const email = req.body.email
     const pass = req.body.pass
+    const usr_type = req.body.roles
+    currnt_role = usr_type
     try {
         const result = await db.query('SELECT * FROM staff_information WHERE email = $1', [email]);
         if (result.rows.length > 0) {
