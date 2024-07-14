@@ -1,0 +1,35 @@
+#odop-ques {
+    height: 13em;
+    width: 90em;
+}
+.submit {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+.submit-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;   
+}
+.submit:hover {
+    background-color: #45a049;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15)
+}
+
+.submit:active {
+    background-color: #3e8e41; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: translateY(2px);
+}
+
+.upload-icon {
+    margin-right: 10px;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="https://erp.sathyabama.ac.in/assets/images/logo-new.png" alt="Logo">
+        </div>
+        <div class="user-profile">
+            <img src="https://erp.sathyabama.ac.in/assets/images/Chancellor.jpg" alt="User Avatar">
+            <div class="username">Student</div>
+            <a href="/logout" class="logout-btn"><i class="fas fa-sign-out-alt"></i>  Logout</a>
+        </div>
+    </nav>
+
+
+
+    <div class="container">
+        <div class="sidebar">
+            <h1 class="dash">Dashboard</h1>
+            <div class="admin-profile">
+                <div class="admin-icon"><img src="student.jpg" alt="std Image"></div>
+                <p><%=StudentName%> </p>
+            </div>
+            <ul>
+                <li><a href="/student-dashboard"><i class="fas fa-home"></i>  Home</a></li>
+                <li><a href="/odop-std"><i class="fas fa-edit"></i> My ODOP</a></li>
+                <li><a href="/edit-student-datas"><i class="fas fa-user-plus"></i>  Edit Info</a></li>
+                <li><a href="/my-stats"><i class="fas fa-file-alt"></i>  My Statistics</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+
+            <h1>Student Information</h1>
+            <div class="details">
+                <div class="detail-row">
+                    <div class="label">Name:</div>
+                    <div class="value"><%=StudentName%></div>
+                </div>
+                <div class="detail-row">
+                    <div class="label">Email:</div>
+                    <div class="value"><%=StudentEmail%></div>
+                </div>
+                <div class="detail-row">
+                    <div class="label">Gender:</div>
+                    <div class="value"><%=StudentGender%></M></div>
+                </div>
+                <div class="detail-row">
+                    <div class="label">Mobile No:</div>
+                    <div class="value"><%=StudentMobileNum%></div>
+                </div>
+                <div class="detail-row">
+                    <div class="label">Department:</div>
+                    <div class="value">Information Technology</div>
+                </div>
+                <div class="detail-row">
+                    <div class="label">Mentor Name:</div>
+                    <div class="value">Mentor Name</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        <% if (success) { %>
+            <script>
+            Swal.fire({
+                icon: 'success',
+                title: 'Welcome',
+                text: 'Logged in successfully'
+            });
+        </script>
+        <% } %>
+</body>
+</html>
