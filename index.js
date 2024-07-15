@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const pg = require("pg");
 const bcrypt = require('bcrypt');
+const fs = require('fs');
 
 
 const db = new pg.Client({
@@ -66,9 +67,17 @@ app.get("/about", async (req, res) => {
 });
 
 app.get("/mentees", async (req, res) => {
-    const result = await db.query('SELECT * FROM mentor_student_information');
-    data = result.rows
-    res.render("student-mentees-15.ejs", {datas:data});
+    const directoryPath = './public/mentees';
+    fs.readdir(directoryPath, (err, files) => {
+        if (err) {
+          console.error('Error reading directory:', err);
+          return;
+        }
+      
+        console.log(files);
+        res.render("student-mentees-15.ejs", {datas:files});
+      });
+    
 });
 
 app.get("/login", async (req, res) => {

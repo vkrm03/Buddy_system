@@ -4,8 +4,8 @@
 <title>Mentee student info</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="home.css">
-<link rel="stylesheet" href="student-mentees-15.css">
+<link rel="stylesheet" href="/home.css">
+<link rel="stylesheet" href="/student-mentees-15.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -31,13 +31,13 @@ body {font-family: "Lato", sans-serif}
   <% datas.forEach(function(data){ %>
       <div class="name-card">
           <div class="profile-img">
-              <img src="senior.jpg" alt="Profile Image">
+              <img src=<%=data%> alt="Profile Image">
           </div>
           <div class="details">
-              <h2><%=data.name%></h2>
-              <p>Reg No: <%=data.reg_no%></p>
-              <p>Email: <%=data.email%></p>
-              <p>Mobile: <%=data.mobile_no%></p>
+              <h2><%=data.split('.')[0]%></h2>
+              <p>Dept: Information Technology</p>
+              <p>Email: example@gmail.com</p>
+              <p>Mobile: +91 9568451236</p>
           </div>
       </div>
       <% }); %>
