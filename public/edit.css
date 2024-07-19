@@ -141,7 +141,7 @@ nav {
     display: contents;
 }
 
-.label {
+Label {
     display: flex;
     align-items: center;
     font-weight: bold;
@@ -167,6 +167,52 @@ nav {
     justify-content: center;
     margin-top: 20px;   
 }
+
+.datetime-container {
+    display: flex;
+    align-items: center;
+    background: white;
+  }
+  .link-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    background: white;
+  }
+
+  label {
+    width: 10%;
+    margin-right: 10px;
+    font-size: 16px;
+    color: #333;
+  }
+
+  input[type="datetime-local"] {
+    padding: 10px;
+    width: 40%;
+    font-size: 16px;
+    border: 2px solid #007BFF;
+    border-radius: 5px;
+  }
+
+  input[type="datetime-local"]:focus {
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 91, 255, 0.5);
+  }
+  input[type="text"] {
+    width: 40%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #007BFF;
+    border-radius: 5px;
+  }
+
+  input[type="text"]:focus {
+    outline: none;
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 91, 255, 0.5);
+  }
 #odop-ques {
     height: 13em;
     width: 90em;

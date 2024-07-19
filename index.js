@@ -74,7 +74,6 @@ app.get("/mentees", async (req, res) => {
           return;
         }
       
-        console.log(files);
         res.render("student-mentees-15.ejs", {datas:files});
       });
     
@@ -201,6 +200,10 @@ app.get("/edit-admin",checkAuth, async (req, res) => {
     res.render("edit-admin.ejs");
 });
 
+app.get("/edit-staff",checkAuth, async (req, res) => {
+    res.render("edit-staff.ejs");
+});
+
 app.get("/edit-student-datas",checkAuth, async (req, res) => {
     res.render("edit-student.ejs");
 });
@@ -213,6 +216,13 @@ app.get("/my-stats",checkAuth, async (req, res) => {
 app.get("/odop-question",checkAuth, async (req, res) => {
     res.render("odop-question.ejs");
 });
+
+app.get("/odop-mentee-question",checkAuth, async (req, res) => {
+    const staff = await db.query('SELECT * FROM staff_information WHERE id = $1', [currnt_Id]);
+    staff_name = staff.rows[0].name
+    res.render("odop-mentee-question.ejs", {StaffName:staff_name,image_url: currnt_image_url});
+});
+
 
 app.get("/edit-student",checkAuth, async (req, res) => {
     const staff = await db.query('SELECT * FROM staff_information WHERE id = $1', [currnt_Id]);
